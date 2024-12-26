@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Form Pemesanan Tiket</h2>
+    <form id="ticket-form" onsubmit="return validateForm()">
+        <!-- Nama Pelanggan -->
+        <label for="name">Nama Pelanggan:</label>
+        <input type="text" id="name" name="name" maxlength="30" required>
+        <span id="name-error" class="error-message"></span><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="email-error" class="error-message"></span><br><br>
+
+        <!-- Jam Keberangkatan -->
+        <label for="departure-time">Jam Keberangkatan:</label>
+        <input type="text" id="departure-time" name="departure-time" required placeholder="00:00 - 23:59">
+        <span id="time-error" class="error-message"></span><br><br>
+
+        <!-- Tujuan Keberangkatan -->
+        <label for="destination">Tujuan Keberangkatan:</label>
+        <input type="text" id="destination" name="destination" required>
+        <span id="destination-error" class="error-message"></span><br><br>
+
+        <!-- Jumlah Tiket -->
+        <label for="ticket-quantity">Jumlah Tiket:</label>
+        <input type="number" id="ticket-quantity" name="ticket-quantity" min="1" max="10" required>
+        <span id="quantity-error" class="error-message"></span><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Tampilkan Data Jika Valid -->
+    <div id="result" style="display: none;">
+        <h3>Data Pemesanan:</h3>
+        <p><strong>Nama Pelanggan:</strong> <span id="result-name"></span></p>
+        <p><strong>Email:</strong> <span id="result-email"></span></p>
+        <p><strong>Jam Keberangkatan:</strong> <span id="result-time"></span></p>
+        <p><strong>Tujuan Keberangkatan:</strong> <span id="result-destination"></span></p>
+        <p><strong>Jumlah Tiket:</strong> <span id="result-quantity"></span></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

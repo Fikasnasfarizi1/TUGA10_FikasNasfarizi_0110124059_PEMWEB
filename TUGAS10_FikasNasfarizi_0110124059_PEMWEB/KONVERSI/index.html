@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Konversi Mata Uang Asing</h2>
+        
+        <label for="amount">Masukkan Nilai Mata Uang Asing:</label>
+        <input type="number" id="amount" placeholder="Masukkan jumlah" oninput="convertCurrency()">
+
+        <label for="currency">Pilih Mata Uang:</label>
+        <select id="currency" onchange="convertCurrency()">
+            <option value="USD">Dollar US</option>
+            <option value="SGD">Dollar Singapore</option>
+            <option value="MYR">Ringgit Malaysia</option>
+            <option value="JPY">Yen Jepang</option>
+            <option value="EUR">Euro</option>
+            <option value="SAR">Riyal Arab Saudi</option>
+        </select>
+
+        <div class="result">
+            <p id="resultText">Nilai dalam Rupiah: 0</p>
+        </div>
+    </div>
+
+    <script src="konversi.js"></script>
+</body>
+</html>

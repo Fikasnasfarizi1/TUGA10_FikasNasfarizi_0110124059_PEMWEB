@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Pilih Gambar Bison</h2>
+    <label for="bison-select">Pilih gambar:</label>
+    <select id="bison-select" onchange="displayBisonImage()">
+        <option value="">--Pilih Gambar--</option>
+        <option value="bison.jpg">Bison</option>
+        <option value="sapi.jpg">Sapi</option>
+        <option value="burung.jpg">Burung</option>
+        <option value="tonggeret.jpg">Tonggeret</option>
+        <option value="semut.jpg">Semut</option>
+        <option value="manusia.jpg">Manusia</option>
+    </select>
+
+    <div id="image-container" class="image-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
